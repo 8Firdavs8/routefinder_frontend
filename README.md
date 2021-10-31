@@ -1,4 +1,4 @@
-# Route Finder
+# Route Finder (Frontend)
 
 ## Description
 
@@ -11,6 +11,9 @@ list of items, with the feature of giving you both:
 This idea builds on existing services from department stores, adding what we believe to be a
 key feature of navigation around the building.
 
+This repository contains the frontend code of the project, which is constructed as a React client
+application for the backend, found [here](https://github.com/isaac-list/store_project/).
+
 ## Getting Started
 
 ### Installing Nodejs and NPM
@@ -19,4 +22,8 @@ To set up your environment, install Node and NPM using docs/setup/nvm-setup.sh
 ### Installing Dependencies
 Once Node and NPM are installed (at least Node version 14LTS), run
 ```npm install```
-in the root of the project directory.
+in the root of the "client" directory.
+
+## License
+This project is licensed under the second version of the Mozilla Public License, the terms of
+which may be found [here](https://www.mozilla.org/en-US/MPL/2.0/).
