@@ -1,18 +1,24 @@
+
 import React, {useState} from 'react'; 
-// import './Home.css';
+import './Home.css';
 
 
 
 function HomePage(){
     const [text, setText] = useState(null);
-
-    
+   
     const clickHandler = (event) => {
         // When clicked, set text to value of input box
         event.preventDefault();
         // console.log("Clicked");
         let s = document.getElementById("search");
-        setText(s.value);
+        let b = document.getElementById("search1");
+        let c = document.getElementById("search2");
+        let allText = "Book Name: " + s.value + ", " + " ISBN: " + b.value + ", " + " Author: " + c.value;
+
+        setText(allText);
+        // setText(b.value);
+        // setText(c.value);
     };
 
     React.useEffect(() => {
@@ -26,12 +32,17 @@ function HomePage(){
     return (
         <div>
             <form>
-              <input className = 'textFiled' type="text" placeholder="Name or ISBN" id="search"/>
+              <input className = 'textFiled' type="text" placeholder="Book Name" id="search"/>
+              <input className = 'textFiled' type="text" placeholder="ISBN" id="search1"/>
+              <input className = 'textFiled' type="text" placeholder="Author" id="search2"/>
               <button onClick = {clickHandler} className = 'searchButton'>Search</button>
             </form>   
-            <p>
-                {!text ? "No text defined..." : text}
-            </p> 
+            <br/>
+            <div>
+              {!text ? "No text defined..." : text}
+            </div>
+                
+          
         </div>
     )
 }
